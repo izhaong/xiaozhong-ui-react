@@ -3,26 +3,44 @@
  * @Author: 仲灏<izhaong@outlook.com>
  * @Date: 2021-07-09 11:19:53
  * @LastEditors: 仲灏<izhaong@outlook.com>
- * @LastEditTime: 2021-07-10 11:16:51
+ * @LastEditTime: 2021-07-11 19:35:34
  */
 import React from "react";
 import "./App.css";
+import Button, { ButtonSize, ButtonType } from "./components/Button/button";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.test
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Button
+          btnType={ButtonType.Default}
+          autoFocus
+          className="custom"
+          size={ButtonSize.Small}
         >
-          Learn React
-        </a>
+          test
+        </Button>
+        <Button btnType={ButtonType.Primary}>Nice</Button>
+        <Button btnType={ButtonType.Danger} size={ButtonSize.Large}>
+          hello
+        </Button>
+        <Button
+          btnType={ButtonType.Link}
+          disabled
+          href="https://www.baidu.com"
+          target="_blank"
+        >
+          link test
+        </Button>
+        <Button
+          btnType={ButtonType.Link}
+          href="https://www.baidu.com"
+          target="_blank"
+        >
+          link test
+        </Button>
+     
       </header>
     </div>
   );
