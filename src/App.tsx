@@ -3,12 +3,13 @@
  * @Author: 仲灏<izhaong@outlook.com>
  * @Date: 2021-07-09 11:19:53
  * @LastEditors: 仲灏<izhaong@outlook.com>
- * @LastEditTime: 2021-07-11 19:35:34
+ * @LastEditTime: 2021-07-12 15:41:47
  */
 import React from "react";
 import "./App.css";
 import Button, { ButtonSize, ButtonType } from "./components/Button/button";
-
+import Menu from "./components/Menu/menu";
+import MenuItem from "./components/Menu/menuItem";
 function App() {
   return (
     <div className="App">
@@ -40,8 +41,14 @@ function App() {
         >
           link test
         </Button>
-     
       </header>
+      <section>
+        <Menu >
+          <MenuItem index={0}>cool link</MenuItem>
+          <MenuItem index={1}>cool link</MenuItem>
+          <MenuItem index={2}>cool link</MenuItem>
+        </Menu>
+      </section>
     </div>
   );
 }
